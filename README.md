@@ -2,7 +2,7 @@
 
 ## About <a name = "about"></a>
 
-The objective of this pryect is to create a program that allows us to play tic tac toe against a human opponent or against the machine.
+The objective of this project is to create a program that allows us to play tic tac toe against a human opponent or against the machine.
 
 ## Getting Started <a name = "getting_started"></a>
 
