@@ -118,3 +118,13 @@ body {
 }
 
 /*                    END Board styles                      */
+
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 600px){
+    .welcome_image{
+        width: 70%;
+    }
+}
