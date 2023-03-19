@@ -36,11 +36,20 @@ Once the game starts you will see in the side panel whose turn is it to play, ea
 
 ## Views
 
-COMMING SOON!!
+<br>
+Welcome page:
+<img src="./images/welcome_page_screenshoot.jpg">
+<br><br>  
+Input names page:
+<img src="./images/input_names_screenshoot_mobile.png">
 <br><br>
+Board page:
+<img src="./images/game_board_screenshoot.png">
+<br><br>
+
 
 ## Deploy 🚀
 
 <div align="center">
-DEMO COMMING SOON<br>
- <a href="#" target="_blank">DEMO COMMING SOON</a></div>
+Be my guest and try out the game!<br>
+ <a href="https://fran1893.github.io/tic_tac_toe/" target="_blank">Here is the demo, HAVE FUN!!</a></div>
