@@ -1,0 +1,63 @@
+body {
+    background-color: #eee;
+}
+
+/*                    Begin Board styles                          */
+.board {
+    margin: 50px auto;
+    width: 300px;
+}
+
+.square {
+    height: 100px;
+    width: 100px;
+    font-size: 72px;
+    text-align: center;
+    border: 2px solid #333;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.square:hover {
+    background-color: #ddd;
+}
+
+.status {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.btn-restart {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.players{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.player_1, .player_2 {
+	background:linear-gradient(to bottom, #44c767 5%, #5cbf2a 100%);
+	background-color:#44c767;
+	border-radius:28px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+.player_1:hover, .player_2:hover {
+	background:linear-gradient(to bottom, #5cbf2a 5%, #44c767 100%);
+	background-color:#5cbf2a;
+}
+/*                    End Board styles                      */
