@@ -116,13 +116,13 @@ body {
     background-color: #5cbf2a;
 }
 
-.game_board_wrapper{
+.game_board_wrapper {
     font-family: 'Lobster', cursive;
 }
 
 /* PLAYERS NAMES INPUT STYLES */
 
-.player_names_input_wrapper {
+#player_names_input_wrapper {
 
     display: flex;
     align-items: center;

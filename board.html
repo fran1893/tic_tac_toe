@@ -21,7 +21,7 @@
   </head>
   <body>
     <!--                              BEGIN PLAYERS NAMES INPUT                                        -->
-    <div class="player_names_input_wrapper container">
+    <div class="container" id="player_names_input_wrapper">
       <h1 id="player_names_title">Ingresa los nombres de los jugadores!</h1>
       <div class="input-group mb-3 players_input">
         <span class="input-group-text player_label">Jugador 1</span>
@@ -29,6 +29,7 @@
           type="text"
           class="form-control player_name_placeholder"
           placeholder="Ingresa tu nombre"
+          id="player1_input"
         />
       </div>
       <div class="input-group mb-3 players_input">
@@ -37,6 +38,7 @@
           type="text"
           class="form-control player_name_placeholder"
           placeholder="Ingresa tu nombre"
+          id="player2_input"
         />
       </div>
       <button type="button" class="btn btn-danger" id="start_game_button">
