@@ -31,8 +31,14 @@ const uiBoard = () => {
       <!--                           BEGIN BOARD AND GAME STRUCTURE                                    -->
       <div class="game_board_wrapper">
         <div class="players_board container">
-          <div class="player_1" id="player1_board_name">Player 1</div>
-          <div class="player_2" id="player2_board_name">Player 2</div>
+           <div class = "player1_box">
+             <div class="player_1" id="player1_board_name">Player 1</div>
+             <div id="turnoP1">Es tu turno...</div>
+            </div>
+            <div class = "player2_box">
+              <div class="player_2" id="player2_board_name">Player 2</div>
+              <div id="turnoP2"></div>
+            </div>
         </div>
         <div class="container text-center">
           <div class="board">
@@ -90,6 +96,41 @@ const renderPlayersNames = () => {
   inputWrapper.style.display = "none";
 };
 
+// GAME FUNCTIONALITY
+const gameFunction = () => {
+  const htmlCasillas = document.querySelectorAll(".square");
+  const mapCasillas = [];
+  let turno1 = false;
+
+  const manageClick = (element) => {
+    const uiTurno1 = document.getElementById("turnoP1");
+    const uiTurno2 = document.getElementById("turnoP2");
+    if (element.innerHTML == "") {
+      if (turno1) {
+        element.innerHTML = game.player1.mark;
+        uiTurno1.innerHTML = "Es tu turno...";
+        uiTurno2.innerHTML = " ";
+        mapCasillas[element.id] = "x";
+      } else {
+        element.innerHTML = game.player2.mark;
+        uiTurno2.innerHTML = "Es tu turno..";
+        uiTurno1.innerHTML = " ";
+        mapCasillas[element.id] = "o";
+      }
+      turno1 = !turno1;
+    }
+    // checkWinner(mapCasillas);
+  };
+
+  for (let i = 0; i < htmlCasillas.length; i++) {
+    htmlCasillas[i].addEventListener("click", (event) => {
+      const element = event.target;
+      manageClick(element);
+    });
+    htmlCasillas[i].id = i;
+  }
+};
+
 // RENDER BOARD FUNCTION
 const renderBoard = () => {
   const buttonPvP = document.getElementById("human-vs-human");
@@ -99,6 +140,8 @@ const renderBoard = () => {
     document
       .getElementById("start_game_button")
       .addEventListener("click", renderPlayersNames);
+
+    gameFunction();
   });
 };
 
