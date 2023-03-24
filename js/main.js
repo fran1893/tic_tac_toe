@@ -5,11 +5,11 @@ const root = document.getElementById("root");
 const game = {
   player1: {
     name: null,
-    mark: "X",
+    mark: `<img src="./images/cross-image.png" alt="imagen-token-ganador" class="player1_token">`,
   },
   player2: {
     name: null,
-    mark: "O",
+    mark: `<img src="./images/circle-image.png" alt="imagen-token-ganador" class="player2_token">`,
   },
 };
 
