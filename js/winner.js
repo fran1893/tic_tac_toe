@@ -2,6 +2,14 @@ const renderWinner = (playerWinner) => {
   return `<h1>${playerWinner}</h1>`;
 };
 
+const renderDraw = () => {
+  return `<h2 id="draw_title">Ha terminado en EMPATE!! Puedes reiniciar el juego con el boton si quieres</h2>`;
+};
+
+
+
+
+// CHECK WINNER/DRAW FUNCTIONALITY
 const checkWinner = (player, mapC) => {
   const uiRenderWinner = () => {
     if (player == "X") {
@@ -27,11 +35,7 @@ const checkWinner = (player, mapC) => {
     uiRenderWinner();
   } else if (mapC[2] == player && mapC[4] == player && mapC[6] == player) {
     uiRenderWinner();
-  }
-};
-
-const checkDraw = (mapC)=>{
-  if (
+  } else if (
     mapC[0] != undefined &&
     mapC[1] != undefined &&
     mapC[2] != undefined &&
@@ -42,6 +46,18 @@ const checkDraw = (mapC)=>{
     mapC[7] != undefined &&
     mapC[8] != undefined
   ) {
-    root.innerHTML = renderWinner("Ha terminado en EMPATE!!");
+    const uiDrawStatus = document.getElementById("status");
+    const restartButton = document.getElementById("restart");
+    const uiTurnP1 = document.getElementById("turnoP1");
+    const uiTurnP2 = document.getElementById("TurnoP2");
+
+    uiDrawStatus.innerHTML = renderDraw();
+    uiTurnP1.style.display = "none";
+    uiTurnP2.style.display = "none";
+
+    restartButton.addEventListener("click", () => {
+      renderIndex();
+      renderBoard();
+    });
   }
-}
+};

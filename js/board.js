@@ -82,16 +82,15 @@ const getPlayerNames = () => {
 
 // RENDER PLAYER NAMES FUNCTION
 const renderPlayersNames = () => {
-  // Call to get player names function
   getPlayerNames();
-  //  Get objectives to render names on the board
+
   let player1_board_name = document.getElementById("player1_board_name");
   let player2_board_name = document.getElementById("player2_board_name");
-  // Get objective for the container of the name input window
   let inputWrapper = document.getElementById("player_names_input_wrapper");
-  // Render names on the board
+
   player1_board_name.innerText = game.player1.name;
   player2_board_name.innerText = game.player2.name;
+
   // Hide name input window to show the board
   inputWrapper.style.display = "none";
 };
@@ -105,7 +104,7 @@ const gameFunction = () => {
   const manageClick = (divCasilla) => {
     const uiTurno1 = document.getElementById("turnoP1");
     const uiTurno2 = document.getElementById("turnoP2");
-  
+
     if (divCasilla.innerHTML == "") {
       if (turno1) {
         divCasilla.innerHTML = game.player2.mark;
@@ -120,10 +119,7 @@ const gameFunction = () => {
       }
       turno1 = !turno1;
       checkWinner(mapCasillas[divCasilla.id], mapCasillas);
-      checkDraw(mapCasillas);
     }
-
-    
   };
 
   for (let i = 0; i < htmlCasillas.length; i++) {

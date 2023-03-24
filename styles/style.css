@@ -31,7 +31,7 @@ body {
 }
 
 .welcome_image {
-    width: 50%
+    width: 70%;
 }
 
 .btn-game-mode {
@@ -166,19 +166,22 @@ body {
     font-size: 30px;
 }
 
+#draw_title {
+    font-family: 'Edu NSW ACT Foundation', cursive;
+}
+
 /*                    END Board styles                      */
 
 
 
 /* MEDIA QUERIES */
 
-@media (max-width: 600px) {
-    .welcome_image {
-        width: 70%;
-    }
-}
-
 @media(min-width: 600px) {
+
+    .welcome_image {
+        width: 50%;
+    }
+
     .players_input {
         width: 60%;
     }
