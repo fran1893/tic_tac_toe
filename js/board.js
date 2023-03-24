@@ -102,24 +102,25 @@ const gameFunction = () => {
   const mapCasillas = [];
   let turno1 = false;
 
-  const manageClick = (element) => {
+  const manageClick = (divCasilla) => {
     const uiTurno1 = document.getElementById("turnoP1");
     const uiTurno2 = document.getElementById("turnoP2");
   
-    if (element.innerHTML == "") {
+    if (divCasilla.innerHTML == "") {
       if (turno1) {
-        element.innerHTML = game.player2.mark;
+        divCasilla.innerHTML = game.player2.mark;
         uiTurno1.innerHTML = "Es tu turno...";
         uiTurno2.innerHTML = " ";
-        mapCasillas[element.id] = "O";
+        mapCasillas[divCasilla.id] = "O";
       } else {
-        element.innerHTML = game.player1.mark;
+        divCasilla.innerHTML = game.player1.mark;
         uiTurno2.innerHTML = "Es tu turno..";
         uiTurno1.innerHTML = " ";
-        mapCasillas[element.id] = "X";
+        mapCasillas[divCasilla.id] = "X";
       }
       turno1 = !turno1;
-      checkWinner(mapCasillas[element.id], mapCasillas);
+      checkWinner(mapCasillas[divCasilla.id], mapCasillas);
+      checkDraw(mapCasillas);
     }
 
     
@@ -127,10 +128,9 @@ const gameFunction = () => {
 
   for (let i = 0; i < htmlCasillas.length; i++) {
     htmlCasillas[i].addEventListener("click", (event) => {
-      const element = event.target;
-      manageClick(element);
+      const elementCasilla = event.target;
+      manageClick(elementCasilla);
     });
-    htmlCasillas[i].id = i;
   }
 };
 
