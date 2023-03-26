@@ -61,7 +61,8 @@ body {
     width: 300px;
 }
 
-.player1_token, .player2_token{
+.player1_token,
+.player2_token {
     width: 80px;
 }
 
@@ -103,9 +104,16 @@ body {
     margin-top: 10px;
 }
 
-.player_1,
+.player_1 {
+    background: linear-gradient(to bottom, #5544c7 5%, #5cbf2a 100%)
+}
+
 .player_2 {
     background: linear-gradient(to bottom, #44c767 5%, #5cbf2a 100%);
+}
+
+.player_1,
+.player_2 {
     background-color: #44c767;
     border-radius: 28px;
     border: 1px solid #18ab29;
@@ -121,6 +129,10 @@ body {
 .player_2:hover {
     background: linear-gradient(to bottom, #5cbf2a 5%, #44c767 100%);
     background-color: #5cbf2a;
+}
+
+#turnoP1, #turnoP2{
+    font-size: 30px;
 }
 
 .game_board_wrapper {
@@ -188,48 +200,56 @@ body {
     align-items: center;
     height: 100vh;
     font-family: 'Lobster', cursive;
-  }
-  .winner-title, .h2-winner {
+}
+
+.winner-title,
+.h2-winner {
     text-align: center;
     color: #008080;
     font-weight: bold;
-  }
+}
 
-  .winner-title{
+.winner-title {
     margin-bottom: 50px;
-  }
+}
 
-  .h2-winner{
+.h2-winner {
     margin: 30px;
-  }
-  .card {
+}
+
+.card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border: none;
-  }
-  .winner-body-wrapper {
+}
+
+.winner-body-wrapper {
     text-align: center;
-  }
-  .winner-name {
+}
+
+.winner-name {
     font-size: 72px;
     color: #2a44a4;
     margin-bottom: 20px;
     text-shadow: 2px 2px #f8f9fa;
-  }
-  .btn-restart-winner {
+}
+
+.btn-restart-winner {
     margin-top: 20px;
     background-color: #17a2b8;
     border: none;
     box-shadow: none;
     font-size: 30px;
-  }
-  .btn-restart:hover {
+}
+
+.btn-restart:hover {
     background-color: #138496;
     box-shadow: none;
-  }
+}
 
-  .img_winner{
+.img_winner {
     width: 80px;
-  }
+}
+
 /*                    END Winner page styles              */
 
 /* MEDIA QUERIES */

@@ -84,9 +84,9 @@ const getPlayerNames = () => {
 const renderPlayersNames = () => {
   getPlayerNames();
 
-  let player1_board_name = document.getElementById("player1_board_name");
-  let player2_board_name = document.getElementById("player2_board_name");
-  let inputWrapper = document.getElementById("player_names_input_wrapper");
+  const player1_board_name = document.getElementById("player1_board_name");
+  const player2_board_name = document.getElementById("player2_board_name");
+  const inputWrapper = document.getElementById("player_names_input_wrapper");
 
   player1_board_name.innerText = game.player1.name;
   player2_board_name.innerText = game.player2.name;
@@ -104,6 +104,8 @@ const gameFunction = () => {
   const manageClick = (divCasilla) => {
     const uiTurno1 = document.getElementById("turnoP1");
     const uiTurno2 = document.getElementById("turnoP2");
+    const player1_board_name = document.getElementById("player1_board_name");
+    const player2_board_name = document.getElementById("player2_board_name");
 
     if (divCasilla.innerHTML == "") {
       if (turno1) {
@@ -111,11 +113,15 @@ const gameFunction = () => {
         uiTurno1.innerHTML = "Es tu turno...";
         uiTurno2.innerHTML = " ";
         mapCasillas[divCasilla.id] = "O";
+        player1_board_name.style.background = "linear-gradient(to bottom, #5544c7 5%, #5cbf2a 100%)";
+        player2_board_name.style.background = "linear-gradient(to bottom, #44c767 5%, #5cbf2a 100%)";
       } else {
         divCasilla.innerHTML = game.player1.mark;
         uiTurno2.innerHTML = "Es tu turno..";
         uiTurno1.innerHTML = " ";
         mapCasillas[divCasilla.id] = "X";
+        player2_board_name.style.background = "linear-gradient(to bottom, #5544c7 5%, #5cbf2a 100%)";
+        player1_board_name.style.background = "linear-gradient(to bottom, #44c767 5%, #5cbf2a 100%)";
       }
       turno1 = !turno1;
       checkWinner(mapCasillas[divCasilla.id], mapCasillas);
