@@ -8,7 +8,7 @@ const renderWinner = (playerWinner, playerWinner_mark) => {
           <h1 class="winner-name">${playerWinner}</h1>
           ${playerWinner_mark}
           <h2 class="h2-winner">Felicidades, Francisco. Has ganado el juego. Gracias por participar.</h2>
-          <button type="button" class="btn btn-primary btn-restart-winner">Reiniciar Juego</button>
+          <button id="restartWinner" type="button" class="btn btn-primary btn-restart-winner">Reiniciar Juego</button>
         </div>
       </div>
     </div>
@@ -27,6 +27,11 @@ const checkWinner = (player, mapC) => {
     } else if (player == "O") {
       root.innerHTML = renderWinner(game.player2.name, game.player2.mark);
     }
+    const restartWinner = document.getElementById("restartWinner");
+    restartWinner.addEventListener("click",()=>{
+      renderIndex();
+      renderBoard();
+    })
   };
 
   if (mapC[0] == player && mapC[1] == player && mapC[2] == player) {
