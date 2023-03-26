@@ -7,7 +7,7 @@ const renderWinner = (playerWinner, playerWinner_mark) => {
           <h2 class="h2-winner">El ganador es:</h2>
           <h1 class="winner-name">${playerWinner}</h1>
           ${playerWinner_mark}
-          <h2 class="h2-winner">Felicidades, Francisco. Has ganado el juego. Gracias por participar.</h2>
+          <h2 class="h2-winner">Felicidades, ${playerWinner}. Has ganado el juego. Gracias por participar.</h2>
           <button id="restartWinner" type="button" class="btn btn-primary btn-restart-winner">Reiniciar Juego</button>
         </div>
       </div>
