@@ -2,14 +2,14 @@
 
 ## About <a name = "about"></a>
 
-The objective of this project is to create a program that allows us to play tic tac toe against a human opponent or against the machine.
+The objective of this project is to create a program that allows us to play tic tac toe with a friend.
 
 ## Getting Started <a name = "getting_started"></a>
+Clasic game of tic tac toe!, play with a friend and test your knowledge of the game.
 
 You can start a new game by entering your
-name and choosing the game mode (human vs human or human vs
-machine).
-Once the game starts you will see in the side panel whose turn is it to play, each player will have a maximum of 3 tokens in play and you would only be able to play them on free positions
+name and your challenging friend's name as well!
+Once the game starts you will need to put the name of player one (X) and the name of the player number two (O) after this you will see in the side panel whose turn is it to play, each player will have a token and will only be able to play them on free positions until one of them makes a line of three and wins the game or if all the positions are filled and nobdy manage to pull the line of three the games ends with a draw and can restart the game for the rematch!
 
 ## Local Usage
 
@@ -38,7 +38,7 @@ Once the game starts you will see in the side panel whose turn is it to play, ea
 
 <br>
 Welcome page:
-<img src="./images/welcome_page_screenshoot.jpg">
+<img src="./images/welcome_page_screenshoot.png">
 <br><br>  
 Input names page:
 <img src="./images/input_names_screenshoot_mobile.png">
