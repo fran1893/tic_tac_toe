@@ -20,7 +20,7 @@ const renderDraw = () => {
 };
 
 // CHECK WINNER/DRAW FUNCTIONALITY
-const checkWinner = (playerMark, mapC) => {
+const checkWinner = (playerMark, mapBoxes) => {
   const uiRenderWinner = () => {
     if (playerMark == "X") {
       root.innerHTML = renderWinner(playersObj.player1.name, playersObj.player1.mark);
@@ -34,60 +34,60 @@ const checkWinner = (playerMark, mapC) => {
     });
   };
 
-  if (mapC[0] == playerMark && mapC[1] == playerMark && mapC[2] == playerMark) {
+  if (mapBoxes[0] == playerMark && mapBoxes[1] == playerMark && mapBoxes[2] == playerMark) {
     uiRenderWinner();
   } else if (
-    mapC[3] == playerMark &&
-    mapC[4] == playerMark &&
-    mapC[5] == playerMark
+    mapBoxes[3] == playerMark &&
+    mapBoxes[4] == playerMark &&
+    mapBoxes[5] == playerMark
   ) {
     uiRenderWinner();
   } else if (
-    mapC[6] == playerMark &&
-    mapC[7] == playerMark &&
-    mapC[8] == playerMark
+    mapBoxes[6] == playerMark &&
+    mapBoxes[7] == playerMark &&
+    mapBoxes[8] == playerMark
   ) {
     uiRenderWinner();
   } else if (
-    mapC[0] == playerMark &&
-    mapC[3] == playerMark &&
-    mapC[6] == playerMark
+    mapBoxes[0] == playerMark &&
+    mapBoxes[3] == playerMark &&
+    mapBoxes[6] == playerMark
   ) {
     uiRenderWinner();
   } else if (
-    mapC[1] == playerMark &&
-    mapC[4] == playerMark &&
-    mapC[7] == playerMark
+    mapBoxes[1] == playerMark &&
+    mapBoxes[4] == playerMark &&
+    mapBoxes[7] == playerMark
   ) {
     uiRenderWinner();
   } else if (
-    mapC[2] == playerMark &&
-    mapC[5] == playerMark &&
-    mapC[8] == playerMark
+    mapBoxes[2] == playerMark &&
+    mapBoxes[5] == playerMark &&
+    mapBoxes[8] == playerMark
   ) {
     uiRenderWinner();
   } else if (
-    mapC[0] == playerMark &&
-    mapC[4] == playerMark &&
-    mapC[8] == playerMark
+    mapBoxes[0] == playerMark &&
+    mapBoxes[4] == playerMark &&
+    mapBoxes[8] == playerMark
   ) {
     uiRenderWinner();
   } else if (
-    mapC[2] == playerMark &&
-    mapC[4] == playerMark &&
-    mapC[6] == playerMark
+    mapBoxes[2] == playerMark &&
+    mapBoxes[4] == playerMark &&
+    mapBoxes[6] == playerMark
   ) {
     uiRenderWinner();
   } else if (
-    mapC[0] != undefined &&
-    mapC[1] != undefined &&
-    mapC[2] != undefined &&
-    mapC[3] != undefined &&
-    mapC[4] != undefined &&
-    mapC[5] != undefined &&
-    mapC[6] != undefined &&
-    mapC[7] != undefined &&
-    mapC[8] != undefined
+    mapBoxes[0] != undefined &&
+    mapBoxes[1] != undefined &&
+    mapBoxes[2] != undefined &&
+    mapBoxes[3] != undefined &&
+    mapBoxes[4] != undefined &&
+    mapBoxes[5] != undefined &&
+    mapBoxes[6] != undefined &&
+    mapBoxes[7] != undefined &&
+    mapBoxes[8] != undefined
   ) {
     const uiDrawStatus = document.getElementById("status");
     const restartButton = document.getElementById("restart");
