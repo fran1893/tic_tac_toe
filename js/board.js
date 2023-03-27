@@ -76,8 +76,8 @@ const getPlayerNames = () => {
   let namePlayer2 = document.getElementById("player2_input").value;
 
   // Storage values on game object
-  game.player1.name = namePlayer1;
-  game.player2.name = namePlayer2;
+  playersObj.player1.name = namePlayer1;
+  playersObj.player2.name = namePlayer2;
 };
 
 // RENDER PLAYER NAMES FUNCTION
@@ -88,8 +88,8 @@ const renderPlayersNames = () => {
   const player2_board_name = document.getElementById("player2_board_name");
   const inputWrapper = document.getElementById("player_names_input_wrapper");
 
-  player1_board_name.innerText = game.player1.name;
-  player2_board_name.innerText = game.player2.name;
+  player1_board_name.innerText = playersObj.player1.name;
+  player2_board_name.innerText = playersObj.player2.name;
 
   // Hide name input window to show the board
   inputWrapper.style.display = "none";
@@ -109,14 +109,14 @@ const gameFunction = () => {
 
     if (divCasilla.innerHTML == "") {
       if (turno1) {
-        divCasilla.innerHTML = game.player2.mark;
+        divCasilla.innerHTML = playersObj.player2.mark;
         uiTurno1.innerHTML = "Es tu turno...";
         uiTurno2.innerHTML = " ";
         mapBoxes[divCasilla.id] = "O";
         player1_board_name.style.background = "linear-gradient(to bottom, #5544c7 5%, #5cbf2a 100%)";
         player2_board_name.style.background = "linear-gradient(to bottom, #44c767 5%, #5cbf2a 100%)";
       } else {
-        divCasilla.innerHTML = game.player1.mark;
+        divCasilla.innerHTML = playersObj.player1.mark;
         uiTurno2.innerHTML = "Es tu turno..";
         uiTurno1.innerHTML = " ";
         mapBoxes[divCasilla.id] = "X";

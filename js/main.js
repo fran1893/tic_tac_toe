@@ -2,7 +2,7 @@
 const root = document.getElementById("root");
 
 // Object to storage players data
-const game = {
+const playersObj = {
   player1: {
     name: null,
     mark: `<img src="./images/cross-image.png" alt="imagen-token-ganador" class="player1_token">`,

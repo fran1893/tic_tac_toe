@@ -23,9 +23,9 @@ const renderDraw = () => {
 const checkWinner = (playerMark, mapC) => {
   const uiRenderWinner = () => {
     if (playerMark == "X") {
-      root.innerHTML = renderWinner(game.player1.name, game.player1.mark);
+      root.innerHTML = renderWinner(playersObj.player1.name, playersObj.player1.mark);
     } else if (playerMark == "O") {
-      root.innerHTML = renderWinner(game.player2.name, game.player2.mark);
+      root.innerHTML = renderWinner(playersObj.player2.name, playersObj.player2.mark);
     }
     const restartWinner = document.getElementById("restartWinner");
     restartWinner.addEventListener("click", () => {
