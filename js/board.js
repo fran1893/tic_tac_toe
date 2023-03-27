@@ -97,8 +97,8 @@ const renderPlayersNames = () => {
 
 // GAME FUNCTIONALITY
 const gameFunction = () => {
-  const htmlCasillas = document.querySelectorAll(".square");
-  const mapCasillas = [];
+  const htmlBoxes = document.querySelectorAll(".square");
+  const mapBoxes = [];
   let turno1 = false;
 
   const manageClick = (divCasilla) => {
@@ -112,24 +112,24 @@ const gameFunction = () => {
         divCasilla.innerHTML = game.player2.mark;
         uiTurno1.innerHTML = "Es tu turno...";
         uiTurno2.innerHTML = " ";
-        mapCasillas[divCasilla.id] = "O";
+        mapBoxes[divCasilla.id] = "O";
         player1_board_name.style.background = "linear-gradient(to bottom, #5544c7 5%, #5cbf2a 100%)";
         player2_board_name.style.background = "linear-gradient(to bottom, #44c767 5%, #5cbf2a 100%)";
       } else {
         divCasilla.innerHTML = game.player1.mark;
         uiTurno2.innerHTML = "Es tu turno..";
         uiTurno1.innerHTML = " ";
-        mapCasillas[divCasilla.id] = "X";
+        mapBoxes[divCasilla.id] = "X";
         player2_board_name.style.background = "linear-gradient(to bottom, #5544c7 5%, #5cbf2a 100%)";
         player1_board_name.style.background = "linear-gradient(to bottom, #44c767 5%, #5cbf2a 100%)";
       }
       turno1 = !turno1;
-      checkWinner(mapCasillas[divCasilla.id], mapCasillas);
+      checkWinner(mapBoxes[divCasilla.id], mapBoxes);
     }
   };
 
-  for (let i = 0; i < htmlCasillas.length; i++) {
-    htmlCasillas[i].addEventListener("click", (event) => {
+  for (let i = 0; i < htmlBoxes.length; i++) {
+    htmlBoxes[i].addEventListener("click", (event) => {
       const elementCasilla = event.target;
       manageClick(elementCasilla);
     });
