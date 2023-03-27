@@ -97,7 +97,7 @@ const renderPlayersNames = () => {
 
 // GAME FUNCTIONALITY
 const gameFunction = () => {
-  const htmlBoxes = document.querySelectorAll(".square");
+  const uiBoxes = document.querySelectorAll(".square");
   const mapBoxes = [];
   let turno1 = false;
 
@@ -128,10 +128,10 @@ const gameFunction = () => {
     }
   };
 
-  for (let i = 0; i < htmlBoxes.length; i++) {
-    htmlBoxes[i].addEventListener("click", (event) => {
-      const elementCasilla = event.target;
-      manageClick(elementCasilla);
+  for (let i = 0; i < uiBoxes.length; i++) {
+    uiBoxes[i].addEventListener("click", (event) => {
+      const boxTarget = event.target;
+      manageClick(boxTarget);
     });
   }
 };
