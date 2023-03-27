@@ -20,35 +20,63 @@ const renderDraw = () => {
 };
 
 // CHECK WINNER/DRAW FUNCTIONALITY
-const checkWinner = (player, mapC) => {
+const checkWinner = (playerMark, mapC) => {
   const uiRenderWinner = () => {
-    if (player == "X") {
+    if (playerMark == "X") {
       root.innerHTML = renderWinner(game.player1.name, game.player1.mark);
-    } else if (player == "O") {
+    } else if (playerMark == "O") {
       root.innerHTML = renderWinner(game.player2.name, game.player2.mark);
     }
     const restartWinner = document.getElementById("restartWinner");
-    restartWinner.addEventListener("click",()=>{
+    restartWinner.addEventListener("click", () => {
       renderIndex();
       renderBoard();
-    })
+    });
   };
 
-  if (mapC[0] == player && mapC[1] == player && mapC[2] == player) {
+  if (mapC[0] == playerMark && mapC[1] == playerMark && mapC[2] == playerMark) {
     uiRenderWinner();
-  } else if (mapC[3] == player && mapC[4] == player && mapC[5] == player) {
+  } else if (
+    mapC[3] == playerMark &&
+    mapC[4] == playerMark &&
+    mapC[5] == playerMark
+  ) {
     uiRenderWinner();
-  } else if (mapC[6] == player && mapC[7] == player && mapC[8] == player) {
+  } else if (
+    mapC[6] == playerMark &&
+    mapC[7] == playerMark &&
+    mapC[8] == playerMark
+  ) {
     uiRenderWinner();
-  } else if (mapC[0] == player && mapC[3] == player && mapC[6] == player) {
+  } else if (
+    mapC[0] == playerMark &&
+    mapC[3] == playerMark &&
+    mapC[6] == playerMark
+  ) {
     uiRenderWinner();
-  } else if (mapC[1] == player && mapC[4] == player && mapC[7] == player) {
+  } else if (
+    mapC[1] == playerMark &&
+    mapC[4] == playerMark &&
+    mapC[7] == playerMark
+  ) {
     uiRenderWinner();
-  } else if (mapC[2] == player && mapC[5] == player && mapC[8] == player) {
+  } else if (
+    mapC[2] == playerMark &&
+    mapC[5] == playerMark &&
+    mapC[8] == playerMark
+  ) {
     uiRenderWinner();
-  } else if (mapC[0] == player && mapC[4] == player && mapC[8] == player) {
+  } else if (
+    mapC[0] == playerMark &&
+    mapC[4] == playerMark &&
+    mapC[8] == playerMark
+  ) {
     uiRenderWinner();
-  } else if (mapC[2] == player && mapC[4] == player && mapC[6] == player) {
+  } else if (
+    mapC[2] == playerMark &&
+    mapC[4] == playerMark &&
+    mapC[6] == playerMark
+  ) {
     uiRenderWinner();
   } else if (
     mapC[0] != undefined &&
